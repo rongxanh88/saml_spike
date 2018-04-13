@@ -1,0 +1,25 @@
+databaseChangeLog:
+- changeSet:
+    id: bnguyen001
+    author: bnguyen
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              primaryKey: true
+            name: id
+            type: BIGINT
+        - column:
+            name: first_name
+            type: VARCHAR(255)
+        - column:
+            name: last_name
+            type: VARCHAR(255)
+        - column:
+            constraints:
+              nullable: false
+            name: uuid
+            type: VARCHAR(255)
+        tableName: USERS

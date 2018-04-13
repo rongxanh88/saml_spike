@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:9990/gotham
+    driver-class-name: org.postgresql.Driver
+    username: bruce_wayne
+    password: batman
+    liquibase:
+      default-schema: gotham
+      change-log: classpath:/db/changelog/db.changelog-master.yaml
+      check-change-log-location: true
+      enabled: false
+
+  jpa.hibernate.ddl-auto: none

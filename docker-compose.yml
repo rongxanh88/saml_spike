@@ -1,0 +1,14 @@
+version: "3.6"
+
+services:
+  database:
+    image: postgres:10.3
+    restart: always
+    ports:
+      - "9990:5432"
+    environment:
+      POSTGRES_USER: bruce_wayne
+      POSTGRES_PASSWORD: batman
+      POSTGRES_DB: gotham
+    volumes:
+      - ~/shared_docker_storage/postgres/gotham:/var/lib/postgresql/data
